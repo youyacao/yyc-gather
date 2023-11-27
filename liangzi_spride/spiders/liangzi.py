@@ -58,9 +58,12 @@ class LiangziSpider(scrapy.Spider):
             item['super_type_id'] = data['list'][0]['type_id_1']
             item['vod_director'] = data['list'][0]['vod_director']
             item['vod_blurb'] = data['list'][0]['vod_blurb']
+            item['vod_score'] = data['list'][0]['vod_score']
             item['vod_area'] = data['list'][0]['vod_area']
+            item['vod_sub'] = data['list'][0]['vod_sub']
+            item['vod_pubdate'] = data['list'][0]['vod_pubdate']
             item['vod_lang'] = data['list'][0]['vod_lang']
             item['vod_year'] = data['list'][0]['vod_year']
-            item['vod_play_url'] = (data['list'][0]['vod_play_url']).split('#')
-            item['vod_down_url'] = data['list'][0]['vod_down_url'].split('#')
+            item['vod_play_url'] = (data['list'][0]['vod_play_url'])
+            item['vod_down_url'] = data['list'][0]['vod_down_url']
         yield item
